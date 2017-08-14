@@ -2,6 +2,7 @@ package main;
 
 import eager.EagerSingleton;
 import field.PublicFieldSingleton;
+import holder.HolderClassSingleton;
 import locking.DoubleCheckedLockingSingleton;
 import singleenum.EnumSingleton;
 import sync.SynchronizedSingleton;
@@ -23,5 +24,9 @@ public class SingletonClient {
 				.println(PublicFieldSingleton.UNIQUE_INSTANCE.getDescription());
 
 		System.out.println(EnumSingleton.UNIQUE_INSTANCE.getDescription());
+
+		HolderClassSingleton holderSingleton = HolderClassSingleton
+				.getInstance();
+		System.out.println(holderSingleton.getDescription());
 	}
 }
